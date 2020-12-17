@@ -1,37 +1,32 @@
 .landing-component {
     @include component-base;
+    justify-content: space-between;
     p {
         @include font-text;
         text-align: center;
         
     }
-
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 28vh;
-
         img {
             margin-bottom: 6rem;
         }
-
         h1 {
-        @include font-h1;
+            @include font-h1;
         }
-    }
-    div {
-        position: absolute;
-        bottom: 34px;
-        width: 100%;
-        max-width: 500px;
-        padding: 0 16px;
-        
-        button {
+    button {
             @include emphasized-button;
             width: 100%;
             margin: 16px 0;
         }
+    div {
+        // position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        max-width: 500px;
+        
+        
     }
 
 }
