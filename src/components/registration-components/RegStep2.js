@@ -13,7 +13,6 @@ export default function RegStepOne() {
             <h2>Gib deinen E-Maio Adresse ein</h2>
             <label htmlFor="email">
                 <input 
-                required 
                 type="email" 
                 id="email" 
                 placeholder="E-Mail Adresse oder Benutzername" 

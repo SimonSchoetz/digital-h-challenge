@@ -21,7 +21,6 @@ export default function RegStepOne() {
             </p>
             <label htmlFor="fullName">
                 <input 
-                required 
                 type="fullName" 
                 id="fullName" 
                 placeholder="E-Mail Adresse oder Benutzername" 

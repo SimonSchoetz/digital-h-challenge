@@ -5,7 +5,7 @@
 @mixin component-base {
     position: relative;
     width: 100%;
-    max-width: 500px; //to make it not look ridiculous wide on desktop mode
+    max-width: 375px; //to make it not look ridiculous wide on desktop mode
     height: 100%;
     padding: 0 16px;
     display: flex;
