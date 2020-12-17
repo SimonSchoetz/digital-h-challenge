@@ -70,7 +70,7 @@ export default function Registration() {
                 <form onSubmit={handleSubmit}>
                 <div className="registration-top">
                     <RegStep1 />
-                    {/* <RegStep2 /> */}
+                    <RegStep2 />
                 </div>
                     <div className="bottom-btn-container">
                             <button onClick={()=>nextStep(false)}>Zurück</button>

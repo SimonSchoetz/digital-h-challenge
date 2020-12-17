@@ -4,6 +4,7 @@
         display: flex;
         position: relative;
         height: 100%;
+        overflow-x: hidden;
         
         .registration-top {
             position: relative;
@@ -15,7 +16,8 @@
             height: 80%;
             
             .center, .to-left, .to-right {
-                position: relative;
+                position: absolute;
+                width: 100%;
                 padding: 0 16px;
                 transition: .5s;
             }
