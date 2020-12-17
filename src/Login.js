@@ -10,6 +10,18 @@ export default function Login() {
 
     if (toLanding) {return <Redirect to="/" />}
 
+    const handleSubmit = e => {
+        e.preventDefault();
+        const body = {
+            "email": email,
+            "password": password
+        };
+
+        //body would get sent to the server to be processed and validated there
+        console.log(body)
+        //End of this function would trigger a redirection to the home page
+    }
+
     return (
         <div className="login-component">
             <header>
@@ -19,14 +31,16 @@ export default function Login() {
                     <h2>Login</h2>
                 </div>
             </header>
-            <div>
-                <h2>
-                    Willkommen zurück bei FabuCar
-                </h2>
-                <p>
-                    Melde dich mit deiner E-Mail Adresse oder deinem Benutzernamen an. Falls du dein Passwort nicht mehr weißt, klicke einfach auf “vergessen”.
-                </p>
-                <form>
+            <div className="login-body">
+                <div>
+                    <h2>
+                        Willkommen zurück bei FabuCar
+                    </h2>
+                    <p>
+                        Melde dich mit deiner E-Mail Adresse oder deinem Benutzernamen an. Falls du dein Passwort nicht mehr weißt, klicke einfach auf “vergessen”.
+                    </p>
+                </div>
+                <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="email">
                             <input 
@@ -50,7 +64,9 @@ export default function Login() {
                     </div>
                     <div className="bottom-btn-container">
                         <button onClick={()=>setToLanding(true)}>Zurück</button>
-                        <input type="submit" value="Login" />
+                        <input 
+                        type="submit" 
+                        value="Login" />
                     </div>
                 </form>
             </div>
