@@ -3,15 +3,17 @@
     p {
         @include font-text;
         text-align: center;
+        
     }
 
     header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 28vh;
 
         img {
-            margin: 14rem 0 6rem;
+            margin-bottom: 6rem;
         }
 
         h1 {
@@ -19,7 +21,11 @@
         }
     }
     div {
+        position: absolute;
+        bottom: 34px;
         width: 100%;
+        max-width: 500px;
+        padding: 0 16px;
         
         button {
             @include emphasized-button;
