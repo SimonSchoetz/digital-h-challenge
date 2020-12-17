@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 
 export default function Landing() {
 
@@ -22,8 +22,8 @@ export default function Landing() {
               <p>Das Portal für Kfz-Profis</p>
           </header>
           <div>
-              <button onClick={() => setGoToReg(true)}>Jetzt Registrieren</button>
-              <p>Du hast bereits einen Account? </p>
+              <button onClick={() => setGoToReg(true)}>Jetzt registrieren</button>
+              <p>Du hast bereits einen Account? <Link to="/">Anmelden</Link> </p>
           </div>
         </div>
     )

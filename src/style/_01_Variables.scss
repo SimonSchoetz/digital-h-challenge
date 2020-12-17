@@ -1,4 +1,12 @@
 ////////////
+//  Color
+////////////
+
+$color:#0071BC;
+$fill-color: #0071BC;
+$form-bgc: #DCE2E5;
+
+////////////
 //  Font
 ////////////
 
@@ -10,17 +18,3 @@ $font-weight-bold: 700;
 $font-size-small: 14px;
 $font-size-normal: 18px;
 $font-size-big: 24px;
-
-//General font stylings
-@mixin font-h1 {
-    font-weight: $font-weight-bold;
-    font-size: $font-size-big;
-}
-@mixin font-h2 {
-    font-weight: $font-weight-semi;
-    font-size: $font-size-normal;
-}
-@mixin font-text {
-    font-weight: $font-weight-normal;
-    font-size: $font-size-small;
-}
