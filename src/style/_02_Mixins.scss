@@ -1,4 +1,7 @@
-//Component Basics
+
+////////////////////////////
+//    Component Basics
+////////////////////////////
 @mixin component-base {
     position: relative;
     width: 100%;
@@ -7,10 +10,11 @@
     padding: 0 16px;
     display: flex;
     flex-direction: column;
-    align-items: center ;
+    align-items: center;
 }
-
-//General font stylings
+////////////////////////////
+//  General font stylings
+////////////////////////////
 @mixin font-h1 {
     font-weight: $font-weight-bold;
     font-size: $font-size-big;
@@ -23,6 +27,10 @@
     font-weight: $font-weight-normal;
     font-size: $font-size-small;
 }
+
+////////////////////////////
+//     Form Related
+////////////////////////////
 
 //Button
 @mixin form-btn-emphasized {
@@ -43,4 +51,14 @@
     border: solid 1px  $color-light;
     border-radius: 5px;
     padding: 17px 0;
+}
+//Input Fields
+@mixin input-field {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 14px;
+    padding-left: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: $color-light;
 }
