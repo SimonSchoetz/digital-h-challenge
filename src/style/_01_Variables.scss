@@ -1,4 +1,26 @@
-//font
-$font-light: 400;
-$font-normal: 600;
-$font-bold: 700;
+////////////
+//  Font
+////////////
+
+//Weight
+$font-weight-normal: 400;
+$font-weight-semi: 600;
+$font-weight-bold: 700;
+//Size
+$font-size-small: 14px;
+$font-size-normal: 18px;
+$font-size-big: 24px;
+
+//General font stylings
+@mixin font-h1 {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-big;
+}
+@mixin font-h2 {
+    font-weight: $font-weight-semi;
+    font-size: $font-size-normal;
+}
+@mixin font-text {
+    font-weight: $font-weight-normal;
+    font-size: $font-size-small;
+}
