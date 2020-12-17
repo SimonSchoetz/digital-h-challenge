@@ -1,21 +1,6 @@
-//General Reset
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Nunito Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-//App Basics
-.App {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-}
 
 @import "./style/01_Variables";
 @import "./style/02_Mixins";
+@import "./style/03_Global";
 
 @import "./style/Landing";
