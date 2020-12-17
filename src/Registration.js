@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Redirect, Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { Context } from './Context';
 import GoBack from './components/GoBackButton';
 import DummyStatusBar from './components/DummyStatusBar';
-import RegStepOne from './components/registration-components/RegStepOne';
+import RegStep1 from './components/registration-components/RegStep1';
+import RegStep2 from './components/registration-components/RegStep2';
 
 export default function Registration() {
     const [backToLanding, setBackToLanding] = useState(false)
@@ -25,24 +26,25 @@ export default function Registration() {
     }
 
     //go back and forth in the registration steps
-    let step = 1;
+    const [step, setStep] = useState(1);
     const nextStep = input => {
+        const incStep = step + 1;
+        const decrStep = step - 1;
         if (!input && step <= 1) {
             return
         } else {
-            input ? step ++ : step --
+            input ? setStep(incStep) : setStep(decrStep)
         }
         
     }
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(step)
+        console.log(step+ " vong submit her")
     }
 
     if (backToLanding) {
         return <Redirect to="/" />
     }
-
     return (
         <Context.Provider value={{
             fullName, setFullName,
@@ -54,7 +56,8 @@ export default function Registration() {
             street, setStreet,
             streetNum, setStreetNum,
             postCode, setPostCode,
-            city, setCity
+            city, setCity,
+            step
           }}>
             <div className="registration-component">
                 <header>
@@ -65,7 +68,10 @@ export default function Registration() {
                     </div>
                 </header>
                 <form onSubmit={handleSubmit}>
-                    <RegStepOne />
+                <div className="registration-top">
+                    <RegStep1 />
+                    {/* <RegStep2 /> */}
+                </div>
                     <div className="bottom-btn-container">
                             <button onClick={()=>nextStep(false)}>Zurück</button>
                             <button onClick={()=>nextStep(true)}>Weiter</button>
