@@ -20,10 +20,20 @@ a {
     text-decoration: none;
 }
 
-footer {
+.bottom-btn-container {
     position: relative;
     padding-bottom: 34px;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    input[type=submit] {
+        @include form-btn-emphasized;
+        width: calc(50% - 8px);
+    }
+    button {
+        @include form-btn;
+        width: calc(50% - 8px);
+    }
 }
 
 
@@ -32,6 +42,7 @@ footer {
     height: 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    border-bottom: solid 1px $color-light;
     * {
         @include font-h2;
         display: flex;
@@ -39,12 +50,11 @@ footer {
     }
     span {
         svg {
-            margin-right: 8px;
-            padding-top: 1px;
+            margin: 0 8px 0 16px;
         }
     }
     h2 {
-        text-align: center;
+        justify-self: center;
     }
 }
 

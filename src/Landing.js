@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Redirect, Link } from "react-router-dom";
+import DummyStatusBar from './components/DummyStatusBar';
 
 export default function Landing() {
 
@@ -13,11 +14,7 @@ export default function Landing() {
     return (
         <div className="landing-component">
           <header>
-            <img 
-            className="status-dummy"
-            src={`${process.env.PUBLIC_URL}/assets/images/status-bar-dummy.png`} 
-            alt="Status bar dummy"
-            />
+            <DummyStatusBar />
           </header>
           <div>
               <img 
@@ -28,10 +25,10 @@ export default function Landing() {
               <h1>Herzlich Willkommen!</h1>
               <p>Das Portal für Kfz-Profis</p>
           </div>
-          <footer>
+          <div className="bottom-btn-container">
               <button onClick={() => setGoToReg(true)}>Jetzt registrieren</button>
               <p>Du hast bereits einen Account? <Link to="/login">Anmelden</Link> </p>
-          </footer>
+          </div>
         </div>
     )
 }

@@ -25,7 +25,7 @@
 }
 
 //Button
-@mixin emphasized-button {
+@mixin form-btn-emphasized {
     color: #FFF;
     background-color: $fill-color;
     font-weight: $font-weight-semi;
@@ -34,4 +34,13 @@
     border-radius: 5px;
     padding: 17px 0;
     letter-spacing: .5px;
+}
+@mixin form-btn {
+    color: #000;
+    background-color: #FFF;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-small;
+    border: solid 1px  $color-light;
+    border-radius: 5px;
+    padding: 17px 0;
 }

@@ -13,20 +13,16 @@
             @include font-h1;
         }
     button {
-            @include emphasized-button;
+            @include form-btn-emphasized;
             width: 100%;
             margin: 16px 0;
         }
     div {
-        // position: absolute;
+        width: 100%;
+        // max-width: 500px;
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        width: 100%;
-        max-width: 500px;
-        
-        
     }
 
 }
