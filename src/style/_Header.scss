@@ -1,0 +1,24 @@
+.log-reg-header {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: solid 1px $color-light;
+    * {
+        @include font-h2;
+        display: flex;
+        align-items: center;
+    }
+    span {
+        svg {
+            margin: 0 8px 0 16px;
+        }
+    }
+    h2 {
+        justify-self: center;
+    }
+
+    .go-back-btn {
+        color: $color;
+    }
+}
