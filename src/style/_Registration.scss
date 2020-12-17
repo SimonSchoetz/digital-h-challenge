@@ -1,3 +1,36 @@
 .registration-component {
     @include component-base;
+    form {
+            display: grid;
+            grid-template-rows: 1fr 116px;
+            div {
+                height: 100%;
+            }
+            h2 {
+                @include font-h1;
+                margin-bottom: 16px;
+            }
+            p {
+                @include font-text;
+                margin-bottom: 12px;
+            }
+
+        label {
+            width: 100%;
+            margin: 24px 0;
+            input {
+                @include input-field;
+            }
+        }
+        .bottom-btn-container {
+            button:last-child {
+                @include form-btn-emphasized;
+            }
+            // position: absolute;
+            // bottom: 0;
+            // left: 0;
+            // padding: 0 16px 34px;
+        }
+
+    }
 }

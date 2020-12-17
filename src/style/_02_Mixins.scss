@@ -40,7 +40,7 @@
     font-size: $font-size-small;
     border: none;
     border-radius: 5px;
-    padding: 17px 0;
+    height: 48px;
     letter-spacing: .5px;
 }
 @mixin form-btn {
@@ -50,7 +50,7 @@
     font-size: $font-size-small;
     border: solid 1px  $color-light;
     border-radius: 5px;
-    padding: 17px 0;
+    height: 48px;
 }
 //Input Fields
 @mixin input-field {

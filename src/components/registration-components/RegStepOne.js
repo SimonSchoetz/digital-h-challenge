@@ -4,7 +4,7 @@ import { Context } from '../../Context';
 export default function RegStepOne() {
     const {fullName, setFullName} = useContext(Context);
     return (
-        <Fragment>
+        <div>
             <h2>Gib deinen Namen ein</h2>
             <p>
             Wichtig ist, dass du deinen richtigen Namen eingibst, da wir nur so deine Qualifikation zuordnen können.
@@ -21,6 +21,6 @@ export default function RegStepOne() {
                 value={fullName} 
                 onChange={(e) => setFullName(e.target.value)} />
             </label>
-        </Fragment>
+        </div>
     )
 }

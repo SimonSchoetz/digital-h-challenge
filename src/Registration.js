@@ -6,13 +6,26 @@ import DummyStatusBar from './components/DummyStatusBar';
 import RegStepOne from './components/registration-components/RegStepOne';
 
 export default function Registration() {
-    let step = 1;
+    const [backToLanding, setBackToLanding] = useState(false)
 
     const [fullName, setFullName] = useState("");
+    const [email, setEmail] = useState("");
+    const [verificationCode, setVerificationCode] = useState("");
+    const [password, setPassword] = useState("");
+    const [passwordRepeat, setPasswordRepeat] = useState("");
+    const [workshopName, setWorkshopName] = useState("");
+    const [street, setStreet] = useState("");
+    const [streetNum, setStreetNum] = useState("");
+    const [postCode, setPostCode] = useState("");
+    const [city, setCity] = useState("")
 
+    //if form is not empty, ask if use really wants to do this and lose his progress
     const handleGoBack = () => {
-        console.log("You Clicked Go Back")
+            setBackToLanding(true)
     }
+
+    //go back and forth in the registration steps
+    let step = 1;
     const nextStep = input => {
         if (!input && step <= 1) {
             return
@@ -25,10 +38,23 @@ export default function Registration() {
         e.preventDefault();
         console.log(step)
     }
-    console.log(step)
+
+    if (backToLanding) {
+        return <Redirect to="/" />
+    }
+
     return (
         <Context.Provider value={{
             fullName, setFullName,
+            email, setEmail,
+            verificationCode, setVerificationCode,
+            password, setPassword,
+            passwordRepeat, setPasswordRepeat,
+            workshopName, setWorkshopName,
+            street, setStreet,
+            streetNum, setStreetNum,
+            postCode, setPostCode,
+            city, setCity
           }}>
             <div className="registration-component">
                 <header>
@@ -46,7 +72,7 @@ export default function Registration() {
                             {/* <input 
                             type="submit" 
                             value="Weiter" /> */}
-                        </div>
+                    </div>
                 </form>
             </div>
         </Context.Provider>
