@@ -12,14 +12,15 @@
         h1 {
             @include font-h1;
         }
-    button {
-            @include form-btn-emphasized;
-            width: 100%;
-            margin: 16px 0;
+        .bottom-btn-container {
+            button {
+                @include form-btn-emphasized;
+                width: 100%;
+                margin: 16px 0;
+            }
         }
     div {
         width: 100%;
-        // max-width: 500px;
         display: flex;
         flex-direction: column;
         align-items: center;
