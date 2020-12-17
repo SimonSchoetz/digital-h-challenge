@@ -23,7 +23,7 @@ export default function Landing() {
           </header>
           <div>
               <button onClick={() => setGoToReg(true)}>Jetzt registrieren</button>
-              <p>Du hast bereits einen Account? <Link to="/">Anmelden</Link> </p>
+              <p>Du hast bereits einen Account? <Link to="/login">Anmelden</Link> </p>
           </div>
         </div>
     )
