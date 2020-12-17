@@ -7,12 +7,10 @@ function App() {
   return (
     <div className="App">
     <BrowserRouter>
-    <Switch>
-      <Route exact path="/" render={() => <Landing/>} />
-      <Route exact path="/registration" render={() => <Registration/>} />
-          
-    </Switch>
-
+      <Switch>
+        <Route exact path="/" render={() => <Landing/>} />
+        <Route exact path="/registration" render={() => <Registration/>} /> 
+      </Switch>
     </BrowserRouter>
     </div>
   );

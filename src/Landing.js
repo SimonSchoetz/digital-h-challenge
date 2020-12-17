@@ -1,6 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Redirect } from "react-router-dom";
 
 export default function Landing() {
+
+    const [goToReg, setGoToReg] = useState(false)
+
+    if (goToReg) {
+        return <Redirect to="/registration" />
+    }
+       
+
     return (
         <div className="landing-component">
           <header>
@@ -11,7 +20,11 @@ export default function Landing() {
               height="139"/>
               <h1>Herzlich Willkommen!</h1>
               <p>Das Portal für Kfz-Profis</p>
-          </header>  
+          </header>
+          <div>
+              <button onClick={() => setGoToReg(true)}>Jetzt Registrieren</button>
+              <p>Du hast bereits einen Account? </p>
+          </div>
         </div>
     )
 }
