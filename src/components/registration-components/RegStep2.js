@@ -2,20 +2,16 @@ import React, {useContext} from 'react';
 import { Context } from '../../Context';
 import { Link } from "react-router-dom";
 
-export default function RegStep2({i}) {
+export default function RegStep2({position}) {
     const {email, setEmail, step, setStep} = useContext(Context);
-    const side = () => {
-        if (step === i) return "center"
-        if (step < i ) return "to-right"
-        if (step > i ) return "to-left"
-    }
+    
     const handleSubmit = e => {
         e.preventDefault()
         if (email) setStep(step + 1)
     }
 
     return (
-        <form className={`registration-form ${side()}`} onSubmit={handleSubmit}>
+        <form className={`registration-form ${position}`} onSubmit={handleSubmit}>
             <div className={`registration-top`}>
                 <h2>Gib deinen E-Mail Adresse ein</h2>
                 <label htmlFor="email">

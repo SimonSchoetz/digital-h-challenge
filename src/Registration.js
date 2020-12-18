@@ -23,6 +23,11 @@ export default function Registration() {
 
     //go back and forth in the registration steps
     const [step, setStep] = useState(1);
+    const side = i => {
+        if (step === i) return "center"
+        if (step < i ) return "to-right"
+        if (step > i ) return "to-left"
+    }
 
 
     return (
@@ -48,9 +53,9 @@ export default function Registration() {
                     </div>
                 </header>
                     {/* Habe versucht die Components über ein Array zu rendern um die Keys nicht hard coden zu müssen aber nicht zum laufen gebracht*/}
-                    <RegStep1 i={1}/>
-                    <RegStep2 i={2}/>
-                    {/* <RegStep3 i={3}/> */}
+                    <RegStep1 position={side(1)}/>
+                    <RegStep2 position={side(2)}/>
+                    <RegStep3 position={side(3)}/>
             </div>
         </Context.Provider>
     )

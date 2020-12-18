@@ -1,15 +1,9 @@
 import React, {useContext} from 'react';
 import { Context } from '../../Context';
 
-export default function RegStep1({i}) {
+export default function RegStep1({position}) {
     const {fullName, setFullName, step,  setStep} = useContext(Context);
-    const side = () => {
-        if (step === i) {
-            return "center"
-        } else {
-            return "to-left"
-        }
-    }
+    
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -17,7 +11,7 @@ export default function RegStep1({i}) {
     }
 
     return (
-        <form className={`registration-form ${side()}`} onSubmit={handleSubmit}>
+        <form className={`registration-form ${position}`} onSubmit={handleSubmit}>
             <div className={`registration-top`}>
                 <h2>Gib deinen Namen ein</h2>
                 <p>
