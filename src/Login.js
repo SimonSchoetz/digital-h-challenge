@@ -60,7 +60,7 @@ export default function Login() {
                             value={password} 
                             onChange={(e) => setPassword(e.target.value)} />
                         </label>
-                        <Link to="/">Vergessen</Link>
+                        <Link to="#">Vergessen</Link>
                     </div>
                     <div className="bottom-btn-container">
                         <button onClick={()=>setToLanding(true)}>Zurück</button>

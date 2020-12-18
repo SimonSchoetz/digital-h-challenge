@@ -1,12 +1,11 @@
 .registration-component {
     @include component-base;
-    form {
-        display: flex;
-        position: relative;
-        height: 100%;
-        overflow-x: hidden;
+    overflow-x: hidden; //for desktop
+    .registration-form  {
+        // display: flex;
+        // position: relative;
+        // height: 100%;
         
-        .registration-top {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -14,33 +13,22 @@
             text-align: center;
             width: 100vw;
             max-width: 375px;
-            height: 80%;
-            
-            .center, .to-left, .to-right {
-                position: absolute;
-                width: 100%;
-                padding: 0 16px;
-                transition: .5s;
+            height: 90%;
+            .registration-top {
+                // padding-bottom: 100px;
+                h2 {
+                    @include font-h1;
+                    margin-bottom: 16px;
+                }
+                p {
+                    @include font-text;
+                    margin-bottom: 12px;
+                    padding: 0 16px;
+                    .important {
+                        font-weight: $font-weight-bold;
+                    }
+                }
             }
-            .center {
-                right: 0;
-            }
-            .to-left {
-                right: 100%;
-            }
-            .to-right {
-                right: -100%
-            }
-            h2 {
-                @include font-h1;
-                margin-bottom: 16px;
-            }
-            p {
-                @include font-text;
-                margin-bottom: 12px;
-            }
-        }
-
         label {
             width: 100%;
             margin: 24px 0;
@@ -48,15 +36,30 @@
                 @include input-field;
             }
         }
-
-    }
         .bottom-btn-container {
             button:last-child {
                 @include form-btn-emphasized;
             }
             position: absolute;
             bottom: 0;
-            left: 0;
+            right: 0;
             padding: 0 16px 34px;
         }
+    }
+    .center, .to-left, .to-right {
+        position: absolute;
+        width: 100%;
+        padding: 0 16px;
+        transition: .5s;
+    }
+    .center {
+        right: 0;
+    }
+    .to-left {
+        right: 100%;
+    }
+    .to-right {
+        right: -100%
+    }
+        
 }
