@@ -7,7 +7,6 @@ export default function RegStep2({position}) {
     
     const handleSubmit = e => {
         e.preventDefault()
-        if (email) setStep(step + 1)
     }
 
     return (
@@ -26,8 +25,8 @@ export default function RegStep2({position}) {
                 Mit dem Fortfahren der Registrierung bestätige ich die <Link to="#">Hinweise zum Datenschutz</Link> sowie die geltenden <Link to="#">Nutzungsbedingungen</Link> gelesen und akzeptiert zu haben.
                 </p>
                 <div className={`bottom-btn-container`}>
-                        <button onClick={()=>setStep(step - 1)}>Zurück</button>
-                        <input type="submit" value="Weiter"/>
+                    <button onClick={()=>setStep(step - 1)}>Zurück</button>
+                    <input onClick={()=>setStep(step + 1)} type="submit" value="Weiter" />
                 </div>
             </div>
         </form>
