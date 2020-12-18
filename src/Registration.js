@@ -53,9 +53,11 @@ export default function Registration() {
                     </div>
                 </header>
                     {/* Habe versucht die Components über ein Array zu rendern um die Keys nicht hard coden zu müssen aber nicht zum laufen gebracht*/}
-                    <RegStep1 position={side(1)}/>
-                    <RegStep2 position={side(2)}/>
-                    <RegStep3 position={side(3)}/>
+                    <div className="form-wrapper">
+                        <RegStep1 position={side(1)}/>
+                        <RegStep2 position={side(2)}/>
+                        <RegStep3 position={side(3)}/>
+                    </div>
             </div>
         </Context.Provider>
     )
