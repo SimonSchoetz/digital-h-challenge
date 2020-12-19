@@ -5,15 +5,14 @@ import { Link } from "react-router-dom";
 export default function RegStep2({position}) {
     const {email, setEmail, step, setStep} = useContext(Context);
     
-    
     const handleSubmit = e => {
         e.preventDefault()
         const body = {
             email: email
         }
+        //If you don't see this console.log it's probably because you didn't submit something that looks like an email (input type email validation)
         console.log(body) //To Backend
     }
-
     return (
         <form className={`registration-form ${position}`} onSubmit={handleSubmit}>
             <div className={`registration-top`}>

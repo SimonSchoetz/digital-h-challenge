@@ -7,17 +7,12 @@ import RegStep1 from './components/registration-components/RegStep1';
 import RegStep2 from './components/registration-components/RegStep2';
 import RegStep3 from './components/registration-components/RegStep3';
 import RegStep4 from './components/registration-components/RegStep4';
+import RegStep5 from './components/registration-components/RegStep5';
 
 export default function Registration() {
 
     //Database relevant
     const [email, setEmail] = useState("");                     //Step 2
-    const [workshopName, setWorkshopName] = useState("");       //Step 4
-    const [street, setStreet] = useState("");                   //  " 
-    const [streetNum, setStreetNum] = useState("");             //  " 
-    const [postCode, setPostCode] = useState("");               //  " 
-    const [city, setCity] = useState("");                       //  " 
-
     //go back and forth in the registration steps
     const [step, setStep] = useState(0);
     const side = i => {
@@ -37,11 +32,6 @@ export default function Registration() {
     return (
         <Context.Provider value={{
             email, setEmail,
-            workshopName, setWorkshopName,
-            street, setStreet,
-            streetNum, setStreetNum,
-            postCode, setPostCode,
-            city, setCity,
             step, setStep
         }}>
             <div className="registration-component">
@@ -56,6 +46,7 @@ export default function Registration() {
                     <RegStep2 position={side(1)}/>
                     <RegStep3 position={side(2)}/>
                     <RegStep4 position={side(3)}/>
+                    <RegStep5 position={side(4)}/>
                 </div>
             </div>
         </Context.Provider>

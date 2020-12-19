@@ -1,4 +1,4 @@
-import React, {useContext, useState, useRef } from 'react';
+import React, {useContext, useState, useRef, Fragment } from 'react';
 import { Context } from '../../Context';
 import { Link } from "react-router-dom";
 
@@ -30,15 +30,17 @@ export default function RegStep3({position}) {
     //Render input forms with dynamically generated refs
     const renderVerForm = () => {
         return verCode.map((el, i) => (
-            <label key={i} htmlFor={`verInput-${i}`}>
-                <input 
-                type="text" 
-                id={`verInput-${i}`} 
-                ref={el=>(inputRef.current[i] = el)} 
-                maxLength="1"
-                value={verCode[i]} 
-                onChange={e => handleCodeInput(e, i)} />
-            </label>
+            <Fragment key={i}>
+                <label htmlFor={`verInput-${i}`}>
+                    <input 
+                    type="text" 
+                    id={`verInput-${i}`} 
+                    ref={el=>(inputRef.current[i] = el)} 
+                    maxLength="1"
+                    value={verCode[i]} 
+                    onChange={e => handleCodeInput(e, i)} />
+                </label>
+            </Fragment>
         ))
     }
 
@@ -55,7 +57,6 @@ export default function RegStep3({position}) {
             console.log(body) //To Backend
         }
     }
-    console.log(verCode[5])
     return (
         <form className={`registration-form ${position}`} onSubmit={handleSubmit}>
             <div className={`registration-top`}>
