@@ -57,6 +57,7 @@ export default function RegStep2({position}) {
                         <input 
                         type="text" 
                         id="postCode" 
+                        maxLength="5"
                         placeholder="PLZ" 
                         value={postCode} 
                         onChange={(e) => setPostCode(e.target.value)} />
