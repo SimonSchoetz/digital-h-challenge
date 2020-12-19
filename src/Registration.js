@@ -21,12 +21,21 @@ export default function Registration() {
     const [city, setCity] = useState("");
 
     //go back and forth in the registration steps
-    const [step, setStep] = useState(1);
+    const [step, setStep] = useState(0);
     const side = i => {
         if (step === i) return "center"
         if (step < i ) return "to-right"
         if (step > i ) return "to-left"
     }
+
+    //Tried to render the components via this loop (so I don't have to hard code the position numbers) but it breaks the whole app. Left it here to maybe get feedback on this issue to understand what's going on here
+
+    // const steps = [<RegStep1 />,<RegStep2 />,<RegStep3 />]
+    // const renderSteps = () => {
+    //     return steps.map((Step, i) => (
+    //         <Step key={i} position={side(i)} />
+    //     ))
+    // }
     return (
         <Context.Provider value={{
             fullName, setFullName,
@@ -47,12 +56,10 @@ export default function Registration() {
                     <Link to="/"><GoBack /></Link>
                         <h2>Registrierung</h2>
                     </div>
-                </header>
-                    {/* Habe versucht die Components über ein Array zu rendern um die Keys nicht hard coden zu müssen aber nicht zum laufen gebracht*/}
-                <div className="form-wrapper">
-                    <RegStep1 position={side(1)}/>
-                    <RegStep2 position={side(2)}/>
-                    <RegStep3 position={side(3)}/>
+                </header><div className="form-wrapper">
+                    <RegStep1 position={side(0)}/>
+                    <RegStep2 position={side(1)}/>
+                    <RegStep3 position={side(2)}/>
                 </div>
             </div>
         </Context.Provider>

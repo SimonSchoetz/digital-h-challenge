@@ -1,6 +1,6 @@
 .registration-component {
     @include component-base;
-    overflow-x: hidden; //for desktop
+    overflow-x: hidden;
     .form-wrapper {
         .registration-form  {
             // display: flex;

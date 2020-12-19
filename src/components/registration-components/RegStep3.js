@@ -1,36 +1,53 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useRef } from 'react';
 import { Context } from '../../Context';
 import { Link } from "react-router-dom";
 
 export default function RegStep3({position}) {
-    const {email, step, setStep, } = useContext(Context);
+    const { email, step, setStep } = useContext(Context);
+    const inputRef = useRef([]);
+
     const [isVerified, setIsVerified] = useState(false);
     const [verCode, setVerCode] = useState(["","","","","",""]);
 
-    const fillVerCode= (input, index) => {
+    const handleCodeInput= (e, index) => {
+
+        const { value, id } = e.target;
+        /*
+        ** Full verCode array
+        */
         const currCode = [...verCode];
-        currCode.splice(index, 1, input)
-        setVerCode(currCode)
+        currCode.splice(index, 1, value);
+        setVerCode(currCode);
+        /*
+        ** Jump to next input field
+        */
+
+        if (value) {
+            //Check if current field is not the last
+            if(index !== verCode.length - 1 ) {
+                //Target next input field
+                inputRef.current[index+1].focus()
+            }
+        }
+
     }
     const renderVerForm = () => {
         return verCode.map((el, i) => (
-            <label key={i} htmlFor={`ver-input-${i}`}>
+            <label key={i} htmlFor={`verInput-${i}`}>
                 <input 
                 type="text" 
-                id={`ver-input-${i}`} 
-                placeholder="" 
+                id={`verInput-${i}`} 
+                ref={el=>(inputRef.current[i] = el)} 
                 maxLength="1"
-                // value={verCode.charAt(i)} 
-                onChange={(e) => fillVerCode(e.target.value, i)} />
+                value={verCode[i]} 
+                onChange={e => handleCodeInput(e, i)} />
             </label>
         ))
     }
-
     const handleMoveOn = () => {
         //For this Demo, otherwise it would automatically do this when successfully verified
         if (isVerified) setStep(step + 1)
     }
-
     const handleSubmit = e => {
         e.preventDefault()
         console.log("test")
