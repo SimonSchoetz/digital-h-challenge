@@ -11,7 +11,7 @@ export default function RegStep3({position}) {
 
     const handleCodeInput= (e, index) => {
 
-        const { value, id } = e.target;
+        const { value } = e.target;
         /*
         ** Full verCode array
         */
@@ -21,7 +21,6 @@ export default function RegStep3({position}) {
         /*
         ** Jump to next input field
         */
-
         if (value) {
             //Check if current field is not the last
             if(index !== verCode.length - 1 ) {
@@ -29,7 +28,6 @@ export default function RegStep3({position}) {
                 inputRef.current[index+1].focus()
             }
         }
-
     }
     const renderVerForm = () => {
         return verCode.map((el, i) => (
@@ -71,7 +69,10 @@ export default function RegStep3({position}) {
                 <p>
                 geschickt. Bitte gib den darin enthaltenen sechsstelligen Verifizierungscode hier ein.
                 </p>
+                <div className="validation-form">
                 {renderVerForm()}
+
+                </div>
                 <div className={`bottom-btn-container`}>
                     <button onClick={()=>setStep(step - 1)}>Zurück</button>
                     <input onClick={()=>handleMoveOn()} type="submit" value="Weiter" />
