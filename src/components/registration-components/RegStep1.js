@@ -30,7 +30,7 @@ export default function RegStep1({position}) {
             </div>
             <div className={`bottom-btn-container`}>
                     <button disabled onClick={()=>setStep(step - 1)}>Zurück</button>
-                    <input onClick={()=>setStep(step + 1)} type="submit" value="Weiter" />
+                    <input disabled={!fullName} onClick={()=>setStep(step + 1)} type="submit" value="Weiter" />
             </div>
         </form>
     )
