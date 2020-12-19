@@ -4,13 +4,11 @@ import { Link } from "react-router-dom";
 
 export default function RegStep3({position}) {
     const { email, step, setStep } = useContext(Context);
+    const [verCode, setVerCode] = useState(["","","","","",""]); 
     const inputRef = useRef([]);
 
-    const [isVerified, setIsVerified] = useState(false);
-    const [verCode, setVerCode] = useState(["","","","","",""]);
 
     const handleCodeInput= (e, index) => {
-
         const { value } = e.target;
         /*
         ** Full verCode array
@@ -29,6 +27,7 @@ export default function RegStep3({position}) {
             }
         }
     }
+    //Render input forms with dynamically generated refs
     const renderVerForm = () => {
         return verCode.map((el, i) => (
             <label key={i} htmlFor={`verInput-${i}`}>
@@ -42,24 +41,21 @@ export default function RegStep3({position}) {
             </label>
         ))
     }
-    const handleMoveOn = () => {
-        //For this Demo, otherwise it would automatically do this when successfully verified
-        if (isVerified) setStep(step + 1)
-    }
+
+    //Only exists for this demo to make the the navigation work
     const handleSubmit = e => {
         e.preventDefault()
-        console.log("test")
         //This would be wrapped into a function triggered by the confirmed verification
         if (!verCode.includes("")) {
             const joinedCode = verCode.join("")
 
-            const body = { //something like this would be sent to the server for verification
+            const body = {
                 verifyMe: joinedCode
             }
-            console.log(body)
-            setIsVerified(true) //this is here just for the Demo
+            console.log(body) //To Backend
         }
     }
+    console.log(verCode[5])
     return (
         <form className={`registration-form ${position}`} onSubmit={handleSubmit}>
             <div className={`registration-top`}>
@@ -70,12 +66,12 @@ export default function RegStep3({position}) {
                 geschickt. Bitte gib den darin enthaltenen sechsstelligen Verifizierungscode hier ein.
                 </p>
                 <div className="validation-form">
-                {renderVerForm()}
-
+                    {renderVerForm()}
                 </div>
                 <div className={`bottom-btn-container`}>
                     <button onClick={()=>setStep(step - 1)}>Zurück</button>
-                    <input onClick={()=>handleMoveOn()} type="submit" value="Weiter" />
+                    {/* disabled condition would need to be backed up by verifcation */}
+                    <input disabled={!verCode[5]} onClick={()=>setStep(step + 1)} type="submit" value="Weiter" />
                 </div>
             </div>
         </form>

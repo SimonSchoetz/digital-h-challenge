@@ -3,7 +3,9 @@
  Coding challenge to demonstrate my capabilities.
 
 ---
-I built this demo by keeping an actual usage in mind, so it doesn't just 'look' like it is doing what it is doing but the logic should make it possible to implement form validation and further backend processing.
+I built this demo by keeping an actual usage in mind, so it doesn't just 'look' like it is doing what it is doing but the logic should make it possible to implement form validation and further backend processing
+
+All inputs get console.logged when they would get sent to the backend.
 
 ## Technologies: 
 - React.js

@@ -1,12 +1,16 @@
-import React, { useContext} from 'react';
+import React, { useContext, useState } from 'react';
 import { Context } from '../../Context';
 
 export default function RegStep1({position}) {
-    const {fullName, setFullName, step,  setStep} = useContext(Context);
+    const {step,  setStep} = useContext(Context);
+    const [fullName, setFullName] = useState("");
 
     const handleSubmit = e => {
         e.preventDefault()
-
+        const body = {
+            fullName: fullName
+        }
+        console.log(body) //To Backend
     }
 
     return (

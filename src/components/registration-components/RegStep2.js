@@ -5,8 +5,13 @@ import { Link } from "react-router-dom";
 export default function RegStep2({position}) {
     const {email, setEmail, step, setStep} = useContext(Context);
     
+    
     const handleSubmit = e => {
         e.preventDefault()
+        const body = {
+            email: email
+        }
+        console.log(body) //To Backend
     }
 
     return (
