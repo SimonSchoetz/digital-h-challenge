@@ -2,20 +2,22 @@
     @include component-base;
     overflow-x: hidden;
     .form-wrapper {
+        // height: 100vh;
         .registration-form  {
             position: relative;
+            top: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             width: 100vw;
             max-width: 375px;
-            height: 85%;
-            div:nth-child(2) {
-                justify-self: flex-end;
-            }
+            height: 100%;
+            // div:nth-child(2) {
+            //     padding-top: 60px;
+            // }
             .registration-top {
-                margin-bottom: 100px;
+                // margin-bottom: 100px;
                 h3 {
                     @include font-h1;
                     margin-bottom: 16px;
@@ -68,15 +70,16 @@
                         width: calc(25% - 4px);
                     }
                 }
-                .upload-img-btn {
+            }
+            .bottom-btn-container {
+                .upload-img-btn { //RegStep 6
                     width: 100%;
                     @include form-btn-emphasized;
                     color: $color;
                     background-color: #fff;
                     border: 1px solid $color;
+                    margin-bottom: 16px;
                 }
-            }
-            .bottom-btn-container {
                 button:last-child {
                     @include form-btn-emphasized;
                 }
