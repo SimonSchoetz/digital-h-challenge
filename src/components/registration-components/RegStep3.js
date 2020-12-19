@@ -60,7 +60,7 @@ export default function RegStep3({position}) {
     return (
         <form className={`registration-form ${position}`} onSubmit={handleSubmit}>
             <div className={`registration-top`}>
-                <h2>Gib deinen Verifizierungscode ein</h2>
+                <h3>Gib deinen Verifizierungscode ein</h3>
                 <p>Wir haben dir eine E-Mail an</p> 
                 <p> <Link to="#">{email}</Link> </p> 
                 <p>
@@ -70,7 +70,7 @@ export default function RegStep3({position}) {
                     {renderVerForm()}
                 </div>
                 <div className={`bottom-btn-container`}>
-                    <button onClick={()=>setStep(step - 1)}>Zurück</button>
+                    <button type="button" onClick={()=>setStep(step - 1)}>Zurück</button>
                     {/* disabled condition would need to be backed up by verifcation */}
                     <input disabled={!verCode[5]} onClick={()=>setStep(step + 1)} type="submit" value="Weiter" />
                 </div>

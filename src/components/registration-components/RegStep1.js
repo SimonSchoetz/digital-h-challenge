@@ -16,7 +16,7 @@ export default function RegStep1({position}) {
     return (
         <form className={`registration-form ${position}`} onSubmit={handleSubmit}>
         <div className="registration-top">
-                <h2>Gib deinen Namen ein</h2>
+                <h3>Gib deinen Namen ein</h3>
                 <p>
                 Wichtig ist, dass du deinen richtigen Namen eingibst, da wir nur so deine Qualifikation zuordnen können.
                 </p>
@@ -33,7 +33,7 @@ export default function RegStep1({position}) {
                 </label>
             </div>
             <div className={`bottom-btn-container`}>
-                    <button disabled onClick={()=>setStep(step - 1)}>Zurück</button>
+                    <button type="button" disabled onClick={()=>setStep(step - 1)}>Zurück</button>
                     <input disabled={!fullName} onClick={()=>setStep(step + 1)} type="submit" value="Weiter" />
             </div>
         </form>

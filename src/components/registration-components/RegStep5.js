@@ -24,7 +24,7 @@ export default function RegStep2({position}) {
     return (
         <form className={`registration-form ${position}`} onSubmit={handleSubmit}>
             <div className={`registration-top`}>
-                <h2>Sag uns, wo du arbeitest</h2>
+                <h3>Sag uns, wo du arbeitest</h3>
                 <p>
                 Zur Verifizierung benötigen wir den genauen Namen und die Adresse der Werkstatt, in der du arbeitest oder die du betreibst.
                 </p>
@@ -72,7 +72,7 @@ export default function RegStep2({position}) {
                     </label>
                 </div>
                 <div className={`bottom-btn-container`}>
-                    <button onClick={()=>setStep(step - 1)}>Zurück</button>
+                    <button type="button" onClick={()=>setStep(step - 1)}>Zurück</button>
                     <input type="submit" disabled={isDisabled} onClick={()=>setStep(step + 1)}value="Weiter" />
                 </div>
             </div>

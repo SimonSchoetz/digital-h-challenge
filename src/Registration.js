@@ -8,6 +8,7 @@ import RegStep2 from './components/registration-components/RegStep2';
 import RegStep3 from './components/registration-components/RegStep3';
 import RegStep4 from './components/registration-components/RegStep4';
 import RegStep5 from './components/registration-components/RegStep5';
+import RegStep6 from './components/registration-components/RegStep6';
 
 export default function Registration() {
 
@@ -47,6 +48,7 @@ export default function Registration() {
                     <RegStep3 position={side(2)}/>
                     <RegStep4 position={side(3)}/>
                     <RegStep5 position={side(4)}/>
+                    <RegStep6 position={side(5)}/>
                 </div>
             </div>
         </Context.Provider>
