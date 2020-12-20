@@ -113,6 +113,14 @@ form {
                 }
             }    
         }
+        .step-6 {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+            h3 {
+                margin: 3rem 0 1.5rem;
+            }
+        }
     }
     //For switching left and right
     .center, .to-left, .to-right {
