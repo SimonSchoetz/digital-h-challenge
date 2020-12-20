@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import {Link} from "react-router-dom";
 import { Context } from '../../Context';
 
 export default function RegStep1({position}) {
@@ -36,7 +35,7 @@ export default function RegStep1({position}) {
                 </div>
                 <div className={`bottom-container`}>
                         {/* Not a fan of a button wrapped in a link but this button seems redundant anyways because of 'Zurück' button in the top left corner */}
-                        <Link to="/"><button >Zurück</button></Link> 
+                        <button >Zurück</button>
                         <input disabled={!fullName} onClick={()=>setStep(step + 1)} type="submit" value="Weiter" />
                 </div>
             </form>

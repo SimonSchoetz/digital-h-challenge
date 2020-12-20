@@ -45,7 +45,7 @@ export default function Login() {
                     </div>    
                     <div className="bottom-container">
                         {/* Not a fan of a button wrapped in a link but this button seems redundant anyways because of 'Zurück' button in the top left corner */}
-                        <Link to="/"><button>Zurück</button></Link>
+                        <button>Zurück</button>
                         <input type="submit" value="Login" />
                     </div>
                 </form>
