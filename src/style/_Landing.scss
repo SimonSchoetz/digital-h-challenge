@@ -1,16 +1,12 @@
 .landing-component {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
+    @include flex-base;
     padding: 0 16px;
     height: 100%;
     img {
         margin: 6rem 0;
     }
     .landing-top {
-        display: flex;
-        flex-flow: wrap;
-        justify-content: center;
+        @include flex-base;
         align-self: flex-end;
         width: 100%;
     }

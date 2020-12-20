@@ -1,0 +1,20 @@
+
+.login-body, .registration-body {
+    height: $component-height;
+    padding: 0 16px;
+    }
+    form {
+        @include flex-base;
+        height: 100%;
+        .top-container {
+            align-self: flex-end;
+            position: relative;
+            label {
+                input {
+                    @include input-field;
+                }
+            }
+    
+        }
+    }
+    

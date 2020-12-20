@@ -7,17 +7,19 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;   
 }
-//App Basics
-html {
-    font-size: 12px;
 
+//App Basics
+html { //Change base rem from 16px to 12px
+    font-size: 12px;
 }
+
 #root {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
 }
+
 .App {
     width: 100%;
     max-width: 375px; //To contain in desktop mode
