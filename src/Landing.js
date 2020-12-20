@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Redirect, Link } from "react-router-dom";
 
+
 export default function Landing() {
 
     const [goToReg, setGoToReg] = useState(false)

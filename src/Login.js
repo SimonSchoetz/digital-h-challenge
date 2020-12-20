@@ -23,12 +23,6 @@ export default function Login() {
 
     return (
         <div className="login-component">
-            <header>
-                <div className="log-reg-header">
-                   <Link to="/"><GoBack /></Link> 
-                    <h2>Login</h2>
-                </div>
-            </header>
             <div className="login-body">
                 <div>
                     <h2>
