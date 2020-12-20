@@ -39,10 +39,10 @@ export default function RegStep2({position}) {
                 <p>
                 Das Passwort muss mindestens 8 Zeichen lang sein und sowohl Zahlen wie auch Buchstaben enthalten.
                 </p>
-                <div className={`bottom-container`}>
-                    <button type="button" onClick={()=>setStep(step - 1)}>Zurück</button>
-                    <input disabled={!password} onClick={()=>setStep(step + 1)} type="submit" value="Weiter" />
-                </div>
+            </div>
+            <div className={`bottom-container`}>
+                <button type="button" onClick={()=>setStep(step - 1)}>Zurück</button>
+                <input disabled={!password} onClick={()=>setStep(step + 1)} type="submit" value="Weiter" />
             </div>
         </form>
     );
