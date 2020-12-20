@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
-import { Redirect, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [toLanding, setToLanding] = useState(false);
-
-    if (toLanding) {return <Redirect to="/" />}
 
     const handleSubmit = e => {
         e.preventDefault();
         const body = {
             "email": email,
             "password": password
-        };
+        }
 
         console.log(body) //To Backend
     }
@@ -47,12 +44,11 @@ export default function Login() {
                         <Link to="#">Vergessen</Link>
                     </div>    
                     <div className="bottom-container">
-                        <button onClick={()=>setToLanding(true)}>Zurück</button>
-                        <input 
-                        type="submit" 
-                        value="Login" />
+                        {/* Not a fan of a button wrapped in a link but this button seems redundant anyways because of 'Zurück' button in the top left corner */}
+                        <Link to="/"><button>Zurück</button></Link>
+                        <input type="submit" value="Login" />
                     </div>
                 </form>
             </div>
-    )
+    );
 }

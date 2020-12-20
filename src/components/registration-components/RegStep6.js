@@ -5,12 +5,12 @@ export default function RegStep2({position}) {
     const {step, setStep} = useContext(Context);
 
     const initiateUpload = () => {
-        console.log("User tries to upload img")
+        console.log("User tries to upload img");
     }               
     
     const handleSubmit = e => {
-        e.preventDefault()
-        console.log("User wants to continue without uploading")
+        e.preventDefault();
+        console.log("User wants to continue without uploading");
     }
 
     return (

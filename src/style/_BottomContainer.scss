@@ -14,7 +14,12 @@
         @include form-btn;
         width: calc(50% - 8px);
     }
-    
+    a {
+        width: calc(50% - 8px);
+        button {
+            width: 100%;
+        }
+    } 
     .upload-img-btn { //RegStep 6
         width: 100%;
         margin: 16px 0;

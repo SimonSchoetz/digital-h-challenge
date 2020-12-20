@@ -1,15 +1,8 @@
-import React, { useState } from 'react';
-import { Redirect, Link } from "react-router-dom";
+import React from 'react';
+import { Link } from "react-router-dom";
 
 
 export default function Landing() {
-
-    const [goToReg, setGoToReg] = useState(false)
-
-    if (goToReg) {
-        return <Redirect to="/registration" />
-    }
-       
 
     return (
         <div className="landing-component">
@@ -25,9 +18,9 @@ export default function Landing() {
               </div>
           </div>
           <div className="bottom-container">
-              <button onClick={() => setGoToReg(true)}>Jetzt registrieren</button>
+              <Link to="registration"><button>Jetzt registrieren</button></Link> 
               <p>Du hast bereits einen Account? <Link to="/login">Anmelden</Link> </p>
           </div>
         </div>
-    )
+    );
 }

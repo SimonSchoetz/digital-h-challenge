@@ -1,6 +1,6 @@
 import './App.scss';
 import React, { useState } from 'react';
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Context } from './Context';
 import Landing from './Landing';
 import Registration from './Registration';
@@ -8,12 +8,13 @@ import Login from './Login';
 import Header from './components/Header';
 
 function App() {
-  //for selective rendering
+  //for selective header rendering
   const [currLocation, setCurrLocation] = useState("/");
   //Database relevant
   const [email, setEmail] = useState(""); //RegStep 2
   //go back and forth in the registration steps
   const [step, setStep] = useState(0);
+
   return (
     <Context.Provider value={{
       currLocation, setCurrLocation,

@@ -18,7 +18,7 @@ export default function RegStep2({position}) {
             postCode: postCode,
             city: city,
         }
-       console.log(body) //To Backend
+       console.log(body); //To Backend
     }
     const isDisabled = !workshop && !street && !streetNum && !postCode && !city;
     return (

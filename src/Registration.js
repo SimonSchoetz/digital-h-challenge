@@ -1,4 +1,4 @@
-import React, {  useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { Context } from './Context';
 import RegStep1 from './components/registration-components/RegStep1';
 import RegStep2 from './components/registration-components/RegStep2';
@@ -10,6 +10,7 @@ import RegStep6 from './components/registration-components/RegStep6';
 export default function Registration() {
     const {step} = useContext(Context);
 
+    // Determine class names for registration card positioning
     const side = i => {
         if (step === i) return "center"
         if (step < i ) return "to-right"
@@ -33,5 +34,5 @@ export default function Registration() {
             <RegStep6 position={side(5)}/>
             <RegStep1 position={side(0)}/>
         </div>
-    )
+    );
 }

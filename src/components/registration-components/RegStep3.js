@@ -41,12 +41,12 @@ export default function RegStep3({position}) {
                     onChange={e => handleCodeInput(e, i)} />
                 </label>
             </Fragment>
-        ))
+        ));
     }
 
     //Only exists for this demo to make the the navigation work
     const handleSubmit = e => {
-        e.preventDefault()
+        e.preventDefault();
         //This would be wrapped into a function triggered by the confirmed verification
         if (!verCode.includes("")) {
             const joinedCode = verCode.join("")
@@ -54,27 +54,29 @@ export default function RegStep3({position}) {
             const body = {
                 verifyMe: joinedCode
             }
-            console.log(body) //To Backend
+            console.log(body); //To Backend
         }
     }
     return (
-        <form className={`registration-form ${position}`} onSubmit={handleSubmit}>
-            <div className={`top-container step-3`}>
-                <h3>Gib deinen Verifizierungscode ein</h3>
-                <p>Wir haben dir eine E-Mail an</p> 
-                <p> <Link to="#">{email}</Link> </p> 
-                <p>
-                geschickt. Bitte gib den darin enthaltenen sechsstelligen Verifizierungscode hier ein.
-                </p>
-                <div className="validation-form">
-                    {renderVerForm()}
+        <>
+            <form className={`registration-form ${position}`} onSubmit={handleSubmit}>
+                <div className={`top-container step-3`}>
+                    <h3>Gib deinen Verifizierungscode ein</h3>
+                    <p>Wir haben dir eine E-Mail an</p> 
+                    <p> <Link to="#">{email}</Link> </p> 
+                    <p>
+                    geschickt. Bitte gib den darin enthaltenen sechsstelligen Verifizierungscode hier ein.
+                    </p>
+                    <div className="validation-form">
+                        {renderVerForm()}
+                    </div>
                 </div>
-            </div>
-            <div className={`bottom-container`}>
-                <button type="button" onClick={()=>setStep(step - 1)}>Zurück</button>
-                {/* disabled condition would need to be backed up by verifcation */}
-                <input disabled={!verCode[5]} onClick={()=>setStep(step + 1)} type="submit" value="Weiter" />
-            </div>
-        </form>
-    )
+                <div className={`bottom-container`}>
+                    <button type="button" onClick={()=>setStep(step - 1)}>Zurück</button>
+                    {/* disabled condition would need to be backed up by verifcation */}
+                    <input disabled={!verCode[5]} onClick={()=>setStep(step + 1)} type="submit" value="Weiter" />
+                </div>
+            </form>
+        </>
+    );
 }
