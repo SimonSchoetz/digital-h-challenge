@@ -4,9 +4,7 @@ height: $component-height;
 padding: 0 16px;
 }
 form {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
+    @include flex-base;
     height: 100%;
     .top-container {
         align-self: flex-end;
@@ -18,11 +16,7 @@ form {
         }
 
     }
-    .bottom-container {
-        align-self: flex-end;
-    }
 }
-
 .login-body {
     form {
         .top-container {
@@ -38,4 +32,70 @@ form {
             }
         }
     }
+}
+
+.registration-body {
+    position: relative;
+    overflow-x: hidden;
+    form {
+        .step-1 {
+            p {
+                .important {
+                    font-weight: $font-weight-bold;
+                }
+                &:nth-of-type(1) {
+                    margin: 1.5rem 0 1rem;
+                }
+                &:nth-of-type(2) {
+                    margin-bottom: 3rem;
+                }
+            }
+                
+        }
+        .step-2 {
+            h3 {
+                padding: 0;
+            }
+            input {
+                margin: 3rem 0 1.5rem
+            }
+        }
+        .step-3 {
+            .validation-form { //RegStep 3
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                gap: 8px;
+                input {
+                    @include font-h1;
+                    padding-left: 0;
+                    text-align: center;
+                    &:focus {
+                        outline: none;
+                        border: 2px solid $color;
+                        border-radius: 5px;
+                    } 
+                }
+            }
+
+        }
+    }
+    //For switching left and right
+    .center, .to-left, .to-right {
+        // height: $component-height;
+        width: 100%;
+        max-width: 375px;
+        padding: 0 16px;
+        position: absolute;
+        transition: .5s;
+    }
+    .center {
+        right: 0;
+    }
+    .to-left {
+        right: 100%;
+    }
+    .to-right {
+        right: -100%
+    }
+
 }

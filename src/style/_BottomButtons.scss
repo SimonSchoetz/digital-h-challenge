@@ -1,4 +1,5 @@
 .bottom-container {
+    align-self: flex-end;
     padding-bottom: 34px;
     width: 100%;
     display: flex;
@@ -13,4 +14,3 @@
         width: calc(50% - 8px);
     }
 }
-

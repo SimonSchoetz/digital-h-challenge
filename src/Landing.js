@@ -20,7 +20,7 @@ export default function Landing() {
               width="125" 
               height="139"/>
               <div>
-                <h2>Herzlich Willkommen!</h2>
+                <h3>Herzlich Willkommen!</h3>
                 <p>Das Portal für Kfz-Profis</p>
               </div>
           </div>

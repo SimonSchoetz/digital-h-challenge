@@ -15,7 +15,7 @@ export default function RegStep2({position}) {
     }
     return (
         <form className={`${position}`} onSubmit={handleSubmit}>
-            <div className={`registration-top`}>
+            <div className={`top-container step-2`}>
                 <h3>Gib deinen E-Mail Adresse ein</h3>
                 <label htmlFor="email">
                     <input 
@@ -29,7 +29,7 @@ export default function RegStep2({position}) {
                 Mit dem Fortfahren der Registrierung bestätige ich die <Link to="#">Hinweise zum Datenschutz</Link> sowie die geltenden <Link to="#">Nutzungsbedingungen</Link> gelesen und akzeptiert zu haben.
                 </p>
             </div>
-            <div className={`bottom-btn-container`}>
+            <div className={`bottom-container`}>
                 <button type="button" onClick={()=>setStep(step - 1)}>Zurück</button>
                 <input disabled={!email} onClick={()=>setStep(step + 1)} type="submit" value="Weiter" />
             </div>

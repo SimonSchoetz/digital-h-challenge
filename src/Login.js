@@ -22,9 +22,7 @@ export default function Login() {
             <div className="login-body">
                 <form onSubmit={handleSubmit}>
                     <div className="top-container">
-                        <h2>
-                            Willkommen zurück bei FabuCar
-                        </h2>
+                        <h3>Willkommen zurück bei FabuCar</h3>
                         <p>
                             Melde dich mit deiner E-Mail Adresse oder deinem Benutzernamen an. Falls du dein Passwort nicht mehr weißt, klicke einfach auf “vergessen”.
                         </p>

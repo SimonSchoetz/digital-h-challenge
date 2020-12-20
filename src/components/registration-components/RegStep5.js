@@ -23,7 +23,7 @@ export default function RegStep2({position}) {
     const isDisabled = !workshop && !street && !streetNum && !postCode && !city;
     return (
         <form className={`registration-form ${position}`} onSubmit={handleSubmit}>
-            <div className={`registration-top`}>
+            <div className={`top-container step-5`}>
                 <h3>Sag uns, wo du arbeitest</h3>
                 <p>
                 Zur Verifizierung benötigen wir den genauen Namen und die Adresse der Werkstatt, in der du arbeitest oder die du betreibst.
@@ -71,7 +71,7 @@ export default function RegStep2({position}) {
                         onChange={(e) => setCity(e.target.value)} />
                     </label>
                 </div>
-                <div className={`bottom-btn-container`}>
+                <div className={`bottom-container`}>
                     <button type="button" onClick={()=>setStep(step - 1)}>Zurück</button>
                     <input type="submit" disabled={isDisabled} onClick={()=>setStep(step + 1)}value="Weiter" />
                 </div>

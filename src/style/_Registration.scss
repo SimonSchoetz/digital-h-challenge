@@ -1,103 +1,67 @@
-.registration-component {
-    @include component-base;
-    overflow-x: hidden;
-        .registration-form  {
-            position: relative;
-            .registration-top {
-                // margin-bottom: 100px;
-                h3 {
-                    @include font-h1;
-                    margin-bottom: 16px;
-                }
-                p {
-                    @include font-text;
-                    margin-bottom: 12px;
-                    padding: 0 16px;
-                    .important {
-                        font-weight: $font-weight-bold;
-                    }
-                }
-                label {
-                    width: 100%;
-                    margin: 24px 0;
-                    input {
-                        @include input-field;
-                    }
-                }
-                .validation-form { //RegStep 3
-                    display: grid;
-                    grid-template-columns: repeat(6, 1fr);
-                    gap: 8px;
-                    input {
-                        @include font-h1;
-                        padding-left: 0;
-                        text-align: center;
-                        &:focus {
-                            outline: none;
-                            border: 2px solid $color;
-                            border-radius: 5px;
-                        } 
-                    }
-                }
-                .address-form { //RegStep 5
-                    display: flex;
-                    flex-flow: wrap;
-                    justify-content: space-between;
-                    label {
-                        margin: 0;
-                        input {
-                            margin-bottom: 8px;
+// .registration-component {
+//         .registration-form  {
+//             position: relative;
+//             .registration-top {
+//                 p {
+//                 }
+//                 .validation-form { //RegStep 3
+//                     display: grid;
+//                     grid-template-columns: repeat(6, 1fr);
+//                     gap: 8px;
+//                     input {
+//                         @include font-h1;
+//                         padding-left: 0;
+//                         text-align: center;
+//                         &:focus {
+//                             outline: none;
+//                             border: 2px solid $color;
+//                             border-radius: 5px;
+//                         } 
+//                     }
+//                 }
+//                 .address-form { //RegStep 5
+//                     display: flex;
+//                     flex-flow: wrap;
+//                     justify-content: space-between;
+//                     label {
+//                         margin: 0;
+//                         input {
+//                             margin-bottom: 8px;
 
-                        }
-                    }
-                    .big-chunk {
-                        width: calc(75% - 4px);
-                    }
-                    .small-chunk {
-                        width: calc(25% - 4px);
-                    }
-                }
-                .reg-step-6-top {
-                    margin-bottom: 30px;
-                }
-            }
-            .bottom-btn-container {
-                // position: absolute;
-                // bottom: 0;
-                // right: 0;
-                padding: 0 16px 34px;
+//                         }
+//                     }
+//                     .big-chunk {
+//                         width: calc(75% - 4px);
+//                     }
+//                     .small-chunk {
+//                         width: calc(25% - 4px);
+//                     }
+//                 }
+//                 .reg-step-6-top {
+//                     margin-bottom: 30px;
+//                 }
+//             }
+//             .bottom-btn-container {
+//                 // position: absolute;
+//                 // bottom: 0;
+//                 // right: 0;
+//                 padding: 0 16px 34px;
 
-                .upload-img-btn { //RegStep 6
-                    width: 100%;
-                    @include form-btn-emphasized;
-                    color: $color;
-                    background-color: #fff;
-                    border: 1px solid $color;
-                    margin-bottom: 16px;
-                }
-                button:last-child {
-                    @include form-btn-emphasized;
-                }
-            }
+//                 .upload-img-btn { //RegStep 6
+//                     width: 100%;
+//                     @include form-btn-emphasized;
+//                     color: $color;
+//                     background-color: #fff;
+//                     border: 1px solid $color;
+//                     margin-bottom: 16px;
+//                 }
+//                 button:last-child {
+//                     @include form-btn-emphasized;
+//                 }
+//             }
         
 
-        //For switching left and right
-        .center, .to-left, .to-right {
-            position: absolute;
-            width: 100%;
-            padding: 0 16px;
-            transition: .5s;
-        }
-        .center {
-            right: 0;
-        }
-        .to-left {
-            right: 100%;
-        }
-        .to-right {
-            right: -100%
-        }
 
-    }
+//     }
         
-}
+// }
