@@ -8,6 +8,10 @@
     -moz-osx-font-smoothing: grayscale;   
 }
 //App Basics
+html {
+    font-size: 12px;
+
+}
 #root {
     width: 100vw;
     height: 100vh;

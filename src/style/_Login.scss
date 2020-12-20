@@ -1,32 +1,40 @@
-.login-component {
-    height: $component-height;
-    padding: 0 16px;
-    .login-body {
-        height: 100%;
-        form {
-            display: flex;
-            flex-flow: wrap;
-            justify-content: center;
-            height: 100%;
-            .login-top {
-                align-self: flex-end;
-                position: relative;
-                label {
-                    input {
-                        @include input-field;
-                    }
-                }
-                a {
-                    position: absolute;
-                    font-weight: $font-weight-bold;
-                    font-size: $font-size-small;
-                    right: 32px;
-                    bottom: 30px;
-                }
 
+.login-body, .registration-body {
+height: $component-height;
+padding: 0 16px;
+}
+form {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    height: 100%;
+    .top-container {
+        align-self: flex-end;
+        position: relative;
+        label {
+            input {
+                @include input-field;
             }
-            .bottom-btn-container {
-                align-self: flex-end;
+        }
+
+    }
+    .bottom-container {
+        align-self: flex-end;
+    }
+}
+
+.login-body {
+    form {
+        .top-container {
+            p {
+                margin: 2rem 0 4rem;
+            }
+            a {
+                position: absolute;
+                font-weight: $font-weight-bold;
+                font-size: $font-size-small;
+                right: 32px;
+                bottom: 30px;
             }
         }
     }

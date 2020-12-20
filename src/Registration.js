@@ -24,13 +24,13 @@ export default function Registration({step}) {
     // }
     return (
             <div className="registration-component">
-                <div className="form-wrapper">
-                    <RegStep1 position={side(0)}/>
-                    <RegStep2 position={side(1)}/>
+                <div className="registration-body">
+                    {/* <RegStep2 position={side(1)}/>
                     <RegStep3 position={side(2)}/>
                     <RegStep4 position={side(3)}/>
                     <RegStep5 position={side(4)}/>
-                    <RegStep6 position={side(5)}/>
+                    <RegStep6 position={side(5)}/> */}
+                    <RegStep1 position={side(0)}/>
                 </div>
             </div>
     )

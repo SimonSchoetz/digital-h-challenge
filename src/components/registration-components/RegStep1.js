@@ -15,7 +15,7 @@ export default function RegStep1({position}) {
 
     return (
         <form className={`registration-form ${position}`} onSubmit={handleSubmit}>
-        <div className="registration-top">
+            <div className="registration-top">
                 <h3>Gib deinen Namen ein</h3>
                 <p>
                 Wichtig ist, dass du deinen richtigen Namen eingibst, da wir nur so deine Qualifikation zuordnen können.

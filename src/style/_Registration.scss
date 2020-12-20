@@ -1,21 +1,8 @@
 .registration-component {
     @include component-base;
     overflow-x: hidden;
-    .form-wrapper {
-        position: relative;
-        height: 100%;
-        width: 100%;
         .registration-form  {
-            z-index: 4;
-            position: absolute;
-            top: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            width: 100vw;
-            max-width: 375px;
-            height: 100%;
+            position: relative;
             .registration-top {
                 // margin-bottom: 100px;
                 h3 {
@@ -92,7 +79,7 @@
                     @include form-btn-emphasized;
                 }
             }
-        }
+        
 
         //For switching left and right
         .center, .to-left, .to-right {

@@ -20,11 +20,11 @@ export default function Landing() {
               width="125" 
               height="139"/>
               <div>
-                <h1>Herzlich Willkommen!</h1>
+                <h2>Herzlich Willkommen!</h2>
                 <p>Das Portal für Kfz-Profis</p>
               </div>
           </div>
-          <div className="bottom-btn-container">
+          <div className="bottom-container">
               <button onClick={() => setGoToReg(true)}>Jetzt registrieren</button>
               <p>Du hast bereits einen Account? <Link to="/login">Anmelden</Link> </p>
           </div>

@@ -19,10 +19,9 @@ export default function Login() {
     }
 
     return (
-        <div className="login-component">
             <div className="login-body">
                 <form onSubmit={handleSubmit}>
-                    <div className="login-top">
+                    <div className="top-container">
                         <h2>
                             Willkommen zurück bei FabuCar
                         </h2>
@@ -49,7 +48,7 @@ export default function Login() {
                         </label>
                         <Link to="#">Vergessen</Link>
                     </div>    
-                    <div className="bottom-btn-container">
+                    <div className="bottom-container">
                         <button onClick={()=>setToLanding(true)}>Zurück</button>
                         <input 
                         type="submit" 
@@ -57,6 +56,5 @@ export default function Login() {
                     </div>
                 </form>
             </div>
-        </div>
     )
 }

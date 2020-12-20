@@ -2,25 +2,20 @@
     display: flex;
     flex-flow: wrap;
     justify-content: center;
-    align-items: flex-end;
     padding: 0 16px;
     height: 100%;
     img {
         margin: 6rem 0;
     }
-    h1 {
-        @include font-h1;
-    }
     .landing-top {
         display: flex;
         flex-flow: wrap;
         justify-content: center;
+        align-self: flex-end;
         width: 100%;
     }
-    .bottom-btn-container {
-        display: flex;
-        flex-flow: wrap;
-        justify-content: center;
+    .bottom-container {
+        align-self: flex-end;
         * {
             width: 100%;
         }
