@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Redirect, Link } from "react-router-dom";
-import GoBack from './components/GoBackButton';
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -16,9 +15,7 @@ export default function Login() {
             "password": password
         };
 
-        //body would get sent to the server to be processed and validated there
-        console.log(body)
-        //End of this function would trigger a redirection to the home page
+        console.log(body) //To Backend
     }
 
     return (
