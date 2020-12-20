@@ -1,34 +1,26 @@
-import React, { useState } from 'react';
-import { Redirect, Link } from "react-router-dom";
-import DummyStatusBar from './components/DummyStatusBar';
+import React from 'react';
+import { Link } from "react-router-dom";
+
 
 export default function Landing() {
 
-    const [goToReg, setGoToReg] = useState(false)
-
-    if (goToReg) {
-        return <Redirect to="/registration" />
-    }
-       
-
     return (
         <div className="landing-component">
-          <header>
-            <DummyStatusBar />
-          </header>
-          <div>
+          <div className="landing-top">
               <img 
               src={`${process.env.PUBLIC_URL}/assets/images/fabu-car-logo.png`} 
               alt="FabuCar Logo" title="FabuCar" 
               width="125" 
               height="139"/>
-              <h1>Herzlich Willkommen!</h1>
-              <p>Das Portal für Kfz-Profis</p>
+              <div>
+                <h3>Herzlich Willkommen!</h3>
+                <p>Das Portal für Kfz-Profis</p>
+              </div>
           </div>
-          <div className="bottom-btn-container">
-              <button onClick={() => setGoToReg(true)}>Jetzt registrieren</button>
+          <div className="bottom-container">
+              <Link to="registration"><button>Jetzt registrieren</button></Link> 
               <p>Du hast bereits einen Account? <Link to="/login">Anmelden</Link> </p>
           </div>
         </div>
-    )
+    );
 }

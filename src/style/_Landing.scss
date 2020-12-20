@@ -1,29 +1,24 @@
 .landing-component {
-    @include component-base;
-    justify-content: space-between;
-    p {
-        @include font-text;
-        text-align: center;
-        
+    @include flex-base;
+    padding: 0 16px;
+    height: 100%;
+    img {
+        margin: 6rem 0;
     }
-        img {
-            margin-bottom: 6rem;
-        }
-        h1 {
-            @include font-h1;
-        }
-        .bottom-btn-container {
-            button {
-                @include form-btn-emphasized;
-                width: 100%;
-                margin: 16px 0;
-            }
-        }
-    div {
+    .landing-top {
+        @include flex-base;
+        align-self: flex-end;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    }
+    .bottom-container {
+        align-self: flex-end;
+        * {
+            width: 100%;
+        }
+        button {
+            @include form-btn-emphasized;
+            margin: 16px 0;
+        }
     }
 
 }

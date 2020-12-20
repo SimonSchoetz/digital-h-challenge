@@ -1,47 +1,28 @@
 import React, { useState } from 'react';
-import { Redirect, Link } from "react-router-dom";
-import GoBack from './components/GoBackButton';
-import DummyStatusBar from './components/DummyStatusBar';
+import { Link } from "react-router-dom";
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [toLanding, setToLanding] = useState(false);
-
-    if (toLanding) {return <Redirect to="/" />}
 
     const handleSubmit = e => {
         e.preventDefault();
         const body = {
             "email": email,
             "password": password
-        };
+        }
 
-        //body would get sent to the server to be processed and validated there
-        console.log(body)
-        //End of this function would trigger a redirection to the home page
+        console.log(body) //To Backend
     }
 
     return (
-        <div className="login-component">
-            <header>
-                <DummyStatusBar />
-                <div className="log-reg-header">
-                   <Link to="/"><GoBack /></Link> 
-                    <h2>Login</h2>
-                </div>
-            </header>
             <div className="login-body">
-                <div>
-                    <h2>
-                        Willkommen zurück bei FabuCar
-                    </h2>
-                    <p>
-                        Melde dich mit deiner E-Mail Adresse oder deinem Benutzernamen an. Falls du dein Passwort nicht mehr weißt, klicke einfach auf “vergessen”.
-                    </p>
-                </div>
                 <form onSubmit={handleSubmit}>
-                    <div>
+                    <div className="top-container">
+                        <h3>Willkommen zurück bei FabuCar</h3>
+                        <p>
+                            Melde dich mit deiner E-Mail Adresse oder deinem Benutzernamen an. Falls du dein Passwort nicht mehr weißt, klicke einfach auf “vergessen”.
+                        </p>
                         <label htmlFor="email">
                             <input 
                             required 
@@ -61,15 +42,13 @@ export default function Login() {
                             onChange={(e) => setPassword(e.target.value)} />
                         </label>
                         <Link to="#">Vergessen</Link>
-                    </div>
-                    <div className="bottom-btn-container">
-                        <button onClick={()=>setToLanding(true)}>Zurück</button>
-                        <input 
-                        type="submit" 
-                        value="Login" />
+                    </div>    
+                    <div className="bottom-container">
+                        {/* Not a fan of a button wrapped in a link but this button seems redundant anyways because of 'Zurück' button in the top left corner */}
+                        <Link to="/"><button>Zurück</button></Link>
+                        <input type="submit" value="Login" />
                     </div>
                 </form>
             </div>
-        </div>
-    )
+    );
 }

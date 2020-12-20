@@ -1,8 +1,5 @@
-import React, {  useState } from 'react';
-import { Link } from "react-router-dom";
+import React, { useContext } from 'react';
 import { Context } from './Context';
-import GoBack from './components/GoBackButton';
-import DummyStatusBar from './components/DummyStatusBar';
 import RegStep1 from './components/registration-components/RegStep1';
 import RegStep2 from './components/registration-components/RegStep2';
 import RegStep3 from './components/registration-components/RegStep3';
@@ -11,11 +8,9 @@ import RegStep5 from './components/registration-components/RegStep5';
 import RegStep6 from './components/registration-components/RegStep6';
 
 export default function Registration() {
+    const {step} = useContext(Context);
 
-    //Database relevant
-    const [email, setEmail] = useState("");                     //Step 2
-    //go back and forth in the registration steps
-    const [step, setStep] = useState(0);
+    // Determine class names for registration card positioning
     const side = i => {
         if (step === i) return "center"
         if (step < i ) return "to-right"
@@ -31,26 +26,13 @@ export default function Registration() {
     //     ))
     // }
     return (
-        <Context.Provider value={{
-            email, setEmail,
-            step, setStep
-        }}>
-            <div className="registration-component">
-                <header>
-                    <DummyStatusBar />
-                    <div className="log-reg-header">
-                    <Link to="/"><GoBack /></Link>
-                        <h2>Registrierung</h2>
-                    </div>
-                </header><div className="form-wrapper">
-                    <RegStep1 position={side(0)}/>
-                    <RegStep2 position={side(1)}/>
-                    <RegStep3 position={side(2)}/>
-                    <RegStep4 position={side(3)}/>
-                    <RegStep5 position={side(4)}/>
-                    <RegStep6 position={side(5)}/>
-                </div>
-            </div>
-        </Context.Provider>
-    )
+        <div className="registration-body">
+            <RegStep2 position={side(1)}/>
+            <RegStep3 position={side(2)}/>
+            <RegStep4 position={side(3)}/>
+            <RegStep5 position={side(4)}/>
+            <RegStep6 position={side(5)}/>
+            <RegStep1 position={side(0)}/>
+        </div>
+    );
 }

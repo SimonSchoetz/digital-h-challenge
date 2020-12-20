@@ -1,12 +1,20 @@
 
+/****************
+*    General
+*/
 @import "./style/01_Variables";
 @import "./style/02_Mixins";
 @import "./style/03_Global";
 
-//Pages
+/****************
+*     "Pages"
+*/
 @import "./style/Landing";
 @import "./style/Login";
 @import "./style/Registration";
-//Components
+/****************
+*    Component Specifics
+*/
 @import "./style/Header";
-@import "./style/BottomButtons";
+@import "./style/TopContainer";
+@import "./style/BottomContainer";

@@ -16,5 +16,8 @@ $font-weight-semi: 600;
 $font-weight-bold: 700;
 //Size
 $font-size-small: 14px;
-$font-size-normal: 18px;
-$font-size-big: 24px;
+$font-size-normal: 1.5rem;
+$font-size-big: 2rem;
+
+//component generals
+$component-height: calc(100% - 50px); //50px = height of header

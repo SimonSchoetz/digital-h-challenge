@@ -1,0 +1,31 @@
+
+.bottom-container {
+    align-self: flex-end;
+    padding-bottom: 34px;
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    input[type=submit] {
+        @include form-btn-emphasized;
+        width: calc(50% - 8px);
+    }
+    button {
+        @include form-btn;
+        width: calc(50% - 8px);
+    }
+    a {
+        width: calc(50% - 8px);
+        button {
+            width: 100%;
+        }
+    } 
+    .upload-img-btn { //RegStep 6
+        width: 100%;
+        margin: 16px 0;
+        @include form-btn;
+        color: $color;
+        border: 1px solid $color;
+        font-weight: $font-weight-semi;
+    }
+}
