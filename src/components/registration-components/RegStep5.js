@@ -71,10 +71,10 @@ export default function RegStep2({position}) {
                         onChange={(e) => setCity(e.target.value)} />
                     </label>
                 </div>
-                <div className={`bottom-container`}>
-                    <button type="button" onClick={()=>setStep(step - 1)}>Zurück</button>
-                    <input type="submit" disabled={isDisabled} onClick={()=>setStep(step + 1)}value="Weiter" />
-                </div>
+            </div>
+            <div className={`bottom-container`}>
+                <button type="button" onClick={()=>setStep(step - 1)}>Zurück</button>
+                <input type="submit" disabled={isDisabled} onClick={()=>setStep(step + 1)}value="Weiter" />
             </div>
         </form>
     );

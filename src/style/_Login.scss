@@ -89,6 +89,30 @@ form {
                 margin-bottom: 3rem;
             }
         }
+        .step-5 {
+            p {
+                margin: 1rem 0 3rem;
+            }
+            .address-form { 
+                display: flex;
+                flex-flow: wrap;
+                justify-content: space-between;
+                label {
+                    margin: 0;
+                        width: 100%;
+                    input {
+                        margin-bottom: 8px;
+
+                    }
+                }
+                .big-chunk {
+                    width: calc(75% - 4px);
+                }
+                .small-chunk {
+                    width: calc(25% - 4px);
+                }
+            }    
+        }
     }
     //For switching left and right
     .center, .to-left, .to-right {
