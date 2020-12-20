@@ -21,16 +21,14 @@ export default function Login() {
     return (
         <div className="login-component">
             <div className="login-body">
-                <div>
-                    <h2>
-                        Willkommen zurück bei FabuCar
-                    </h2>
-                    <p>
-                        Melde dich mit deiner E-Mail Adresse oder deinem Benutzernamen an. Falls du dein Passwort nicht mehr weißt, klicke einfach auf “vergessen”.
-                    </p>
-                </div>
                 <form onSubmit={handleSubmit}>
-                    <div>
+                    <div className="login-top">
+                        <h2>
+                            Willkommen zurück bei FabuCar
+                        </h2>
+                        <p>
+                            Melde dich mit deiner E-Mail Adresse oder deinem Benutzernamen an. Falls du dein Passwort nicht mehr weißt, klicke einfach auf “vergessen”.
+                        </p>
                         <label htmlFor="email">
                             <input 
                             required 
@@ -50,7 +48,7 @@ export default function Login() {
                             onChange={(e) => setPassword(e.target.value)} />
                         </label>
                         <Link to="#">Vergessen</Link>
-                    </div>
+                    </div>    
                     <div className="bottom-btn-container">
                         <button onClick={()=>setToLanding(true)}>Zurück</button>
                         <input 

@@ -5,14 +5,18 @@
     box-sizing: border-box;
     font-family: 'Nunito Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    
+    -moz-osx-font-smoothing: grayscale;   
 }
-  //App Basics
-.App {
+//App Basics
+#root {
     width: 100vw;
     height: 100vh;
-    max-width: 375px; //to contain it on desktop mode
+    display: flex;
+    justify-content: center;
+}
+.App {
+    width: 100%;
+    max-width: 375px; //To contain in desktop mode
 }
 
 a {
@@ -24,4 +28,8 @@ a {
 p {
     @include font-text;
     text-align: center;   
+}
+h2 {
+    text-align: center;
+    @include font-h1;
 }
