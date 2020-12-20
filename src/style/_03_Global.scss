@@ -6,17 +6,13 @@
     font-family: 'Nunito Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    
 }
   //App Basics
 .App {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-header {
-    
-    z-index: 5;
+    max-width: 375px; //to contain it on desktop mode
 }
 
 a {
@@ -24,3 +20,8 @@ a {
     text-decoration: none;
 }
 
+
+p {
+    @include font-text;
+    text-align: center;   
+}

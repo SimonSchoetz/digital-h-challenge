@@ -2,7 +2,6 @@ import React, {  useState } from 'react';
 import { Link } from "react-router-dom";
 import { Context } from './Context';
 import GoBack from './components/GoBackButton';
-import DummyStatusBar from './components/DummyStatusBar';
 import RegStep1 from './components/registration-components/RegStep1';
 import RegStep2 from './components/registration-components/RegStep2';
 import RegStep3 from './components/registration-components/RegStep3';
@@ -37,12 +36,12 @@ export default function Registration() {
         }}>
             <div className="registration-component">
                 <header>
-                    <DummyStatusBar />
                     <div className="log-reg-header">
                     <Link to="/"><GoBack /></Link>
                         <h2>Registrierung</h2>
                     </div>
-                </header><div className="form-wrapper">
+                </header>
+                <div className="form-wrapper">
                     <RegStep1 position={side(0)}/>
                     <RegStep2 position={side(1)}/>
                     <RegStep3 position={side(2)}/>

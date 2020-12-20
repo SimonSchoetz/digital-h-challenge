@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Redirect, Link } from "react-router-dom";
 import GoBack from './components/GoBackButton';
-import DummyStatusBar from './components/DummyStatusBar';
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -25,7 +24,6 @@ export default function Login() {
     return (
         <div className="login-component">
             <header>
-                <DummyStatusBar />
                 <div className="log-reg-header">
                    <Link to="/"><GoBack /></Link> 
                     <h2>Login</h2>
